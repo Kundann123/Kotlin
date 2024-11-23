@@ -1,0 +1,50 @@
+{
+  "instrumentation": {
+    "logging": {
+      "level": "ALL"
+    }
+  },
+  "role": {
+    "name": "motorInsurance"
+  },
+  "sampling": {
+    "percentage": 100
+  },
+  "preview": {
+    "sampling": {
+      "overrides": [
+        {
+          "telemetryType": "request",
+          "percentage": 100
+        },
+        {
+          "telemetryType": "dependency",
+          "percentage": 100
+        },
+        {
+          "telemetryType": "trace",
+          "percentage": 100
+        }
+      ]
+    }
+  },
+  "jmxMetrics": [],
+  "customDimensions": {},
+  "instrumentation": {
+    "logging": {
+      "level": "INFO"
+    },
+    "micrometer": {
+      "enabled": true
+    }
+  },
+  "selfDiagnostics": {
+    "destination": "file",
+    "level": "DEBUG",
+    "file": {
+      "path": "/var/tmp/applicationinsights.log",
+      "maxSizeMb": 5,
+      "maxHistory": 1
+    }
+  }
+}
